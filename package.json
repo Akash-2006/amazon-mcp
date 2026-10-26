@@ -1,0 +1,28 @@
+{
+  "name": "amazon-shopping-mcp",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Read-only Amazon India shopping MCP server for Hermes",
+  "type": "module",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsx src/index.ts",
+    "pretest": "npm run build",
+    "test": "tsx --test test/*.test.ts",
+    "check": "tsc --noEmit",
+    "browser:install": "playwright install chromium"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.26.0",
+    "cheerio": "^1.2.0",
+    "playwright": "^1.58.0",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.0"
+  }
+}
